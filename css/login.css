@@ -1,0 +1,106 @@
+@font-face {
+    font-family: quicksand;
+    src: url('../fonts/quicksand/Quicksand-VariableFont_wght.ttf');
+}
+
+input[type=text], input[type=password] {
+    border: .5pt solid #515063;
+    height: 3rem;
+    width: 12rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+input:focus {
+    outline: 2pt solid rgb(101, 101, 105);
+    border: none;
+}
+.input-group {
+    margin: .8rem;
+    padding: .8rem;
+    position: relative;
+}
+.input-label{
+    background-color: #ffffffff;
+    position: absolute;
+    top: .4rem;
+    left: 1.5rem;
+    font-size: larger;
+    z-index: 10;
+    color: #515063;
+}
+input[type=text]:focus + .input-label{
+    /* color: rgb(101, 101, 105); */
+    font-weight: bolder;
+}
+.input-label {
+    font-family: quicksand
+}
+
+body {
+    background: url("../assets/arch_backgroud.jpg");
+}
+.container {
+    /* background-color: #eeeeeecb; */
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+.login-container{
+    /* border: 1pt solid grey; */
+    border-radius: 2rem;
+    background-color: white;
+    margin: 2rem;
+    padding :1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+input {
+    background-color: whitesmoke;
+}
+.logo {
+    margin: 2rem;
+    /* border: 2pt solid #515063; */
+    /* transform: scale(2); */
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    transform:  scale(3);
+}
+button[type=submit] {
+    width: 12rem;
+    font-family: quicksand;
+    height: 3rem;
+    border-radius: 2rem;
+    background-color: #FDFCFC;
+    border: .9pt solid #515063;
+    background-color: #171818;
+    color:white;
+    font-size: larger;
+    font-weight: bold;
+}
+button[type=submit]:hover{
+    
+}
+.form-error {
+    padding: 2rem;
+    width: 40%;
+}
+:root {
+    --error-danger:rgba(236, 14, 118, 0.842);  
+}
+.error-message{
+    font-family: quicksand;
+    color: var(--error-danger) ;
+}
+.label-error {
+    color: var(--error-danger);
+}
+.input-error {
+    border: 2pt var(--error-danger) solid;
+    outline: 2pt var(--error-danger) solid;
+}

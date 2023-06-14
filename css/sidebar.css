@@ -1,0 +1,20 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    height: 100%;
+    padding: 2rem;
+}
+.sidebar div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+    justify-content: center;
+}
+ul {
+    list-style-type: none;
+} 
+.menu-item {
+}
