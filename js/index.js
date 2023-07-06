@@ -62,7 +62,6 @@ class Carousel {
         this.carousel.append(btnContainer)
         this.btns[this.currItem].classList.add(this.buttonSelected)
         this.btns.forEach((btn, index) => {
-            console.log('setting listener')
             btn.addEventListener('click',()=> {
                 this.timer = Date.now
                 this.imageFade(index)
@@ -88,7 +87,6 @@ class Carousel {
             duration: 3000,
             iterations: 1,
         }
-        console.log(this.items[index])
         this.items[index].animate(fadeIn, fadeInTiming)
         this.updateCarousel(index)
     }
@@ -98,9 +96,20 @@ class Carousel {
         this.items[this.currItem].querySelector('.carousel-image').classList.remove('opaque')
         this.items[index].querySelector('.carousel-image').classList.add('opaque')
         this.updateCarousel(index)
-        console.log(this)
     }
 }
 document.querySelectorAll('.carousel').forEach( carousel => {
     let carouselObj  = new Carousel(carousel);
+})
+document.querySelectorAll('.list-item').forEach(listItem => {
+    listItem.addEventListener("click", ()=> {
+        document.querySelector(".active").classList.remove("active");
+        listItem.classList.add("active");
+        console.log(listItem.firstChild.innerText)
+        // elmnt.scrollIntoView({
+        //     behavior: "smooth", 
+        //     block: "start",
+        //     inline: "nearest"
+        // });
+    })
 })
